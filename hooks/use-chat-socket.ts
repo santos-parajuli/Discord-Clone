@@ -56,6 +56,7 @@ export const useChatSocket = ({ addKey, updateKey, queryKey }: ChatSocketProps) 
 					};
 				}
 				const newData = [...oldData.pages];
+				console.log(newData[0]);
 				newData[0] = {
 					...newData[0],
 					items: [message, ...newData[0].items],

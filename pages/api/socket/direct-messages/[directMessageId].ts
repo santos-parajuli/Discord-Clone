@@ -55,13 +55,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
 		if (!conversation) {
 			return res.status(404).json({ error: 'Conversation not found' });
 		}
-
 		const member = conversation.memberOne.profileId === profile.id ? conversation.memberOne : conversation.memberTwo;
-
 		if (!member) {
 			return res.status(404).json({ error: 'Member not found' });
 		}
-
 		let directMessage = await db.directMessage.findFirst({
 			where: {
 				id: directMessageId as string,
@@ -113,7 +110,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
 			if (!isMessageOwner) {
 				return res.status(401).json({ error: 'Unauthorized' });
 			}
-
 			directMessage = await db.directMessage.update({
 				where: {
 					id: directMessageId as string,
@@ -132,7 +128,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponseS
 		}
 
 		const updateKey = `chat:${conversation.id}:messages:update`;
-
 		res?.socket?.server?.io?.emit(updateKey, directMessage);
 
 		return res.status(200).json(directMessage);
