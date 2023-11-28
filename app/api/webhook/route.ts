@@ -2,15 +2,14 @@ import { Webhook } from 'svix';
 import { WebhookEvent } from '@clerk/nextjs/server';
 import { db } from '@/lib/db';
 import { headers } from 'next/headers';
+import { profile } from 'console';
 
 export async function POST(req: Request) {
 	// You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
 	const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
-
 	if (!WEBHOOK_SECRET) {
 		throw new Error('Please add WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local');
 	}
-
 	// Get the headers
 	const headerPayload = headers();
 	const svix_id = headerPayload.get('svix-id');
@@ -46,15 +45,38 @@ export async function POST(req: Request) {
 			status: 400,
 		});
 	}
-
-	// Get the ID and type
-	const { id } = evt.data;
-	const eventType = evt.type;
-
 	switch (evt.type) {
 		case 'user.deleted':
 			try {
-				const result = await db.profile.delete({ where: { userId: id } });
+				const profile = await db.profile.findUnique({
+					where: {
+						userId: evt.data.id,
+					},
+				});
+
+				console.log(profile);
+
+				// Update related servers
+				await db.server.updateMany({
+					where: { profileId: profile?.id },
+					data: { profileId: '656565ee7f4124c18fe65ec2' },
+				});
+
+				// Update related members
+				await db.member.updateMany({
+					where: { profileId: profile?.id },
+					data: { profileId: '656565ee7f4124c18fe65ec2' },
+				});
+
+				await db.channel.updateMany({
+					where: { profileId: profile?.id },
+					data: { profileId: '656565ee7f4124c18fe65ec2' },
+				});
+				// Delete the profile
+				const result = await db.profile.delete({
+					where: { userId: evt.data.id },
+				});
+
 				if (result) {
 					return new Response('User deleted successfully', { status: 200 });
 				} else {
@@ -67,9 +89,6 @@ export async function POST(req: Request) {
 		case 'user.updated':
 			return new Response('User Updated', { status: 200 });
 	}
-
-	console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
 	console.log('Webhook body:', body);
-
 	return new Response('Nothing Happened', { status: 200 });
 }
