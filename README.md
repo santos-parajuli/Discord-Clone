@@ -23,22 +23,22 @@ Discord Replica is a web app where user can login and join servers with other fr
 
 
 ## Technologies
-Next.js
+### Next.js
 Next.js stands as a robust React framework, chosen for its versatility in facilitating server-side rendering, static site generation, and SEO optimization. The framework excels in enhancing performance and user experience, making it the ideal choice for developing a responsive and efficient front-end.
 
-Tailwind CSS
+### Tailwind CSS
 Tailwind CSS, a utility-first CSS framework, streamlines UI development through pre-defined atomic classes. In our project, Tailwind CSS is employed for its flexibility and speed, allowing developers to compose highly customized interfaces. ShadCN UI components further enhance the design, offering a visually appealing and customizable foundation for the application's user interface.
 
-MongoDB and Prisma ORM
+### MongoDB and Prisma ORM
 MongoDB, a NO-SQL database, has been chosen for its scalability and flexibility. Storing data in BSON format, MongoDB accommodates unstructured or semi-structured data, aligning with the dynamic nature of the messaging app. Prisma ORM complements MongoDB by providing an open-source toolkit for efficient database operations, offering a seamless integration that simplifies data management.
 
-Socket.io
+### Socket.io
 Critical to the project's success is Socket.io, a library facilitating real-time, bidirectional communication between clients. This technology is essential for achieving instant message delivery, a core feature in the Discord clone. Socket.io employs WebSocket as its primary communication mechanism, ensuring a responsive and interactive user experience.
 
-Clerk
+### Clerk
 Clerk, a powerful authentication tool, is considered for user authentication in the project. It offers a robust solution for handling user login, registration, and password recovery seamlessly. Integrating Clerk into the project enhances security and provides a user-friendly authentication process.
 
-LiveKit:
+### LiveKit:
 LiveKit, another key component in our technology stack, is incorporated to enable high-quality video and audio communication. As a scalable platform, LiveKit enhances the project's capabilities by facilitating the implementation of video calls, ensuring a seamless and reliable experience for users engaging in virtual conversations.
 
 ## Setup
