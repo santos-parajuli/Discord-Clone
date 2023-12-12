@@ -25,7 +25,10 @@ Access my site at [Discord Replica](https://discordreplica.vercel.app/)
 The project features authentication, real-time messaging, text/audio/video call channels, member conversations, full responsiveness, and light/dark mode.
 
 ## Screenshots
-![Writing](https://unsplash.com/photos/VBPzRgd7gfc)
+### ER Diagram
+![ERD](https://i.imgur.com/ie84I33.png)
+### User Flow Diagram
+![User Flow Diagram](https://i.imgur.com/AuH3nZD.png)
 
 ## Technologies
 
