@@ -54,5 +54,5 @@ Discord Clone is out live and you can view it live at [Discord Replica](https://
 List of contriubutors:
 - [Areeb Ahamed](areebahamad@gmail.com)
 - [Maitri Patel](maitri@gmail.com)
-- [•	Deepak Mikkilneni](deeepak@gmail.com)
+- [Deepak Mikkilneni](deeepak@gmail.com)
 
