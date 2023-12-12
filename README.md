@@ -13,7 +13,7 @@ Access my site at [Discord Replica](https://discordreplica.vercel.app/)
 - [Status](#status)
 
 
-## About The App
+##About The App
 Discord Replica is a web app where user can login and join servers with other friends to chat and call. The technology stack includes `Next.js` for the front end, `Tailwind CSS` and `ShadCn` UI for styling, `MongoDB` with `Prisma` ORM for the database, `Socket.io` for real-time messaging and `Live Kit` for audio and video call feature. The project incorporates features such as authentication, real-time messaging, text/audio/video call channels, member conversations, full responsiveness, and light/dark mode.
 
 
