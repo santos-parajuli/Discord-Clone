@@ -28,7 +28,7 @@ The project features authentication, real-time messaging, text/audio/video call 
 ### ER Diagram
 ![ERD](https://i.imgur.com/ie84I33.png)
 ### User Flow Diagram
-![User Flow Diagram](https://i.imgur.com/AuH3nZD.png)
+![User Flow Diagram](https://i.imgur.com/fYFBFW4.png)
 
 ## Technologies
 
