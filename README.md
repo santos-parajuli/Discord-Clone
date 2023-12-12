@@ -10,7 +10,7 @@ Access my site at [Discord Replica](https://discordreplica.vercel.app/)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
-- [Status](#status)
+- [Credits](#credits)
 
 
 ### About The App
@@ -45,10 +45,6 @@ LiveKit, another key component in our technology stack, is incorporated to enabl
 - download or clone the repository
 - edit the environment variables with your actual variables.
 - run `npm run dev`
-
-
-## Status
-Discord Clone is out live and you can view it live at [Discord Replica](https://discordreplica.vercel.app/)
 
 ## Credits
 List of contriubutors:
