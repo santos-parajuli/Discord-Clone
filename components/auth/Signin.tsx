@@ -8,7 +8,11 @@ import { useTheme } from 'next-themes';
 
 function Signin() {
 	const theme = useTheme().theme === 'dark' ? dark : neobrutalism;
-	return <SignIn appearance={{ baseTheme: theme, variables: { colorPrimary: 'blue' } }} />;
+	return (
+		<div className='flex justify-center items-center h-full'>
+			<SignIn appearance={{ baseTheme: theme, variables: { colorPrimary: 'blue' } }} />
+		</div>
+	);
 }
 
 export default Signin;

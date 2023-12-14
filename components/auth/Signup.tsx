@@ -8,7 +8,11 @@ import { useTheme } from 'next-themes';
 
 function Signup() {
 	const theme = useTheme().theme === 'dark' ? dark : neobrutalism;
-	return <SignUp appearance={{ baseTheme: theme, variables: { colorPrimary: 'blue' } }} />;
+	return (
+		<div className='flex justify-center items-center h-full'>
+			<SignUp appearance={{ baseTheme: theme, variables: { colorPrimary: 'blue' } }} />
+		</div>
+	);
 }
 
 export default Signup;
