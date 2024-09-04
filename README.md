@@ -70,11 +70,4 @@ LiveKit, another key component in our technology stack, is incorporated to enabl
 2. Edit the environment variables with your actual variables.
 3. Run `npm run dev`.
 
-## Credits
-
-List of contributors:
-
--   [Areeb Ahamed](mailto:areebahamad@gmail.com)
--   [Maitri Patel](mailto:maitri@gmail.com)
--   [Deepak Mikkilneni](mailto:deeepak@gmail.com)
     > > > > > > > origin/master
