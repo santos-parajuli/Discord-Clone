@@ -5,12 +5,13 @@ import { initialProfile } from '@/lib/initial-profile';
 import { redirect } from 'next/navigation';
 import { redirectToSignIn } from '@clerk/nextjs';
 
-const SetupPage = async () => {
+const HomePage = async () => {
 	const profile = await initialProfile();
 	if (!profile) {
 		return redirectToSignIn();
 	}
-	return redirect(`/servers`);
+
+	return <InitialHomePage />;
 };
 
-export default SetupPage;
+export default HomePage;

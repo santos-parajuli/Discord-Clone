@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discord Replica - NextJS
 
-## Getting Started
+## Demo link:
 
-First, run the development server:
+Access my site at [Discord Replica](https://discordreplica.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   [About The App](#about-the-app)
+-   [Screenshots](#screenshots)
+-   [Technologies](#technologies)
+-   [Setup](#setup)
+-   [Credits](#credits)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About The App
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Discord Replica** is a web app where users can log in, join servers with friends, and engage in text, audio, and video conversations. The technology stack includes:
 
-## Learn More
+-   **Next.js**: A robust React framework known for its versatility in server-side rendering, static site generation, and SEO optimization.
 
-To learn more about Next.js, take a look at the following resources:
+-   **Tailwind CSS**: A utility-first CSS framework for streamlined UI development, complemented by ShadCN UI for enhanced design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **MongoDB with Prisma ORM**: MongoDB for its scalability and flexibility, and Prisma ORM for efficient database operations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   **Socket.io**: Facilitates real-time, bidirectional communication between clients, crucial for instant messaging.
 
-## Deploy on Vercel
+-   **LiveKit**: Enables high-quality video and audio communication, enhancing the project's capabilities.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project features authentication, real-time messaging, text/audio/video call channels, member conversations, full responsiveness, and light/dark mode.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Screenshots
+
+### ER Diagram
+
+![ERD](https://i.imgur.com/ie84I33.png)
+
+### User Flow Diagram
+
+![User Flow Diagram](https://i.imgur.com/fYFBFW4.png)
+
+## Technologies
+
+### Next.js
+
+Next.js stands as a robust React framework, chosen for its versatility in facilitating server-side rendering, static site generation, and SEO optimization. The framework excels in enhancing performance and user experience, making it the ideal choice for developing a responsive and efficient front-end.
+
+### Tailwind CSS
+
+Tailwind CSS, a utility-first CSS framework, streamlines UI development through pre-defined atomic classes. In our project, Tailwind CSS is employed for its flexibility and speed, allowing developers to compose highly customized interfaces. ShadCN UI components further enhance the design, offering a visually appealing and customizable foundation for the application's user interface.
+
+### MongoDB and Prisma ORM
+
+MongoDB, a NO-SQL database, has been chosen for its scalability and flexibility. Storing data in BSON format, MongoDB accommodates unstructured or semi-structured data, aligning with the dynamic nature of the messaging app. Prisma ORM complements MongoDB by providing an open-source toolkit for efficient database operations, offering a seamless integration that simplifies data management.
+
+### Socket.io
+
+Critical to the project's success is Socket.io, a library facilitating real-time, bidirectional communication between clients. This technology is essential for achieving instant message delivery, a core feature in the Discord clone. Socket.io employs WebSocket as its primary communication mechanism, ensuring a responsive and interactive user experience.
+
+### Clerk
+
+Clerk, a powerful authentication tool, is considered for user authentication in the project. It offers a robust solution for handling user login, registration, and password recovery seamlessly. Integrating Clerk into the project enhances security and provides a user-friendly authentication process.
+
+### LiveKit
+
+LiveKit, another key component in our technology stack, is incorporated to enable high-quality video and audio communication. As a scalable platform, LiveKit enhances the project's capabilities by facilitating the implementation of video calls, ensuring a seamless and reliable experience for users engaging in virtual conversations.
+
+## Setup
+
+1. Download or clone the repository.
+2. Edit the environment variables with your actual variables.
+3. Run `npm run dev`.
+
+    > > > > > > > origin/master
